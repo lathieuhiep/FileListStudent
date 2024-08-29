@@ -13,7 +13,7 @@ public class Student {
     }
 
     // phương thức in thông tin sinh viên
-    public void print() {
+    public void printStudents() {
         System.out.println("Tên: " + name + ", Mã sinh viên: " + id + ", Ngày sinh: " + dob + ", Điểm: " + point);
     }
 }

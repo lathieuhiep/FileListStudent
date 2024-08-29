@@ -30,6 +30,24 @@ public class StudentManger {
                 soLuongByte = in.read(gioByte);
             }
 
+            if ( !text.isEmpty() ) {
+                String[] students = text.toString().split(",");
+
+                for (String student : students) {
+                    String[] info = student.split("-");
+                    String name = info[0];
+                    String id = info[1];
+                    String dob = info[2];
+                    double point = ( info.length > 3 ) ? Double.parseDouble(info[3]) : 0.0;
+
+                    listStudent.add(new Student( name, id, dob, point ));
+                }
+
+                for ( Student student : listStudent ) {
+                    student.printStudents();
+                }
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
